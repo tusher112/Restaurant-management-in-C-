@@ -1,8 +1,9 @@
+//This is a restaurant management project.
+
 #include <bits/stdc++.h>
 #include <string.h>
 using namespace std;
  
-//  Ans 1
 class Restaurant {
 public:
     int food_item_codes[12];
@@ -25,7 +26,7 @@ public:
 };
  
 //  Input data and create instance of Restaurant
-// Ans 2
+
 Restaurant* storeData() {
     int n = 12;
     int food_item_codes[n], food_item_prices[n];
@@ -47,7 +48,7 @@ Restaurant* storeData() {
  
  
 // Print Full item list
-// Ans 3
+
 void print_data(Restaurant* myData) {
  
     cout << "\t\t\t\t\tMAKING BILL" << endl;
@@ -59,7 +60,7 @@ void print_data(Restaurant* myData) {
     }
 }
  
-// Ans 4
+
  
 void print_ordered_items(Restaurant* restaurant, int items) {
     cout << "\t\t\t\t\t Bill Summery" << endl;
@@ -98,7 +99,7 @@ for (int i = 0; i < items; i++)
         cout << "Enter Item " << i + 1 << " Code : ";
         int found_code = 0;
         cin >> restaurant->order_food_item_codes[i];
-        // Ans 8 Start
+        
         for (int j = 0; j < 12; j++) {
             if (restaurant->order_food_item_codes[i] == restaurant->food_item_codes[j]) {
                 found_code = 1;
@@ -111,7 +112,7 @@ for (int i = 0; i < items; i++)
             cout<<"Your code is not valid"<<endl;
             i--;
         }
-        // // Ans 8 End
+        
     }
  
     print_ordered_items(restaurant, items);
